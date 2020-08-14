@@ -1,0 +1,20 @@
+.popup__form-submit {
+  width: 100%;
+  margin-top: 48px;
+  background-color: #000;
+  border-radius: 2px;
+  height: 50px;
+  color: #fff;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.popup__form-submit:not(:disabled):hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 560px) {
+  .popup__form-submit {
+    margin-top: 12px;
+  }
+}

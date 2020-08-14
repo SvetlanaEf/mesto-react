@@ -1,0 +1,22 @@
+@import url(./_error/popup__form-input_error.css);
+
+.popup__form-input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 14px;
+  line-height: 17px;
+  outline: 0;
+}
+
+.popup__form-input + .popup__form-input {
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 560px) {
+  .popup__form-input + .popup__form-input {
+    margin-top: 8px;
+  }
+}

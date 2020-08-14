@@ -1,0 +1,7 @@
+.element__like_active {
+  background: url(https://code.s3.yandex.net/web-code/dom/heart-filled.svg)
+    center no-repeat;
+  opacity: 1;
+  margin: auto;
+  max-height: 18px;
+}
