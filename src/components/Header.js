@@ -1,12 +1,12 @@
 import React from "react";
-import LogoMesto from "../images/mesto.svg";
+import logoMesto from "../images/mesto.svg";
 
 function Header() {
   return (
     <header className="header">
       <a href="/">
         <img
-          src={LogoMesto}
+          src={logoMesto}
           className="header__logo"
           alt="Логотип Места России"
         />

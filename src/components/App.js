@@ -71,15 +71,13 @@ export default function App() {
           required
         />
         <span id="value-input-error" className="popup__form-input-error" />
-        <button type="submit" className="popup__form-submit">
-          Сохранить
-        </button>
       </PopupWithForm>
       <PopupWithForm
         title="Новое место"
         name="place"
         isOpen={isAddPlacePopupOpen}
         onClose={closeAllPopups}
+        submitButtonName="Создать"
       >
         <input
           id="name-input"
@@ -101,15 +99,8 @@ export default function App() {
           required
         />
         <span id="value-input-error" className="popup__form-input-error" />
-        <button type="submit" className="popup__form-submit">
-          Создать
-        </button>
       </PopupWithForm>
-      <PopupWithForm title="Вы уверенны" name="question" isOpen={false}>
-        <button type="submit" className="popup__form-submit">
-          Да
-        </button>
-      </PopupWithForm>
+      <PopupWithForm title="Вы уверенны" name="question" isOpen={false} submitButtonName="Да" />
       <PopupWithForm
         title="Обновить аватар"
         name="avatar"
@@ -125,9 +116,6 @@ export default function App() {
           required
         />
         <span id="avatar-input-error" className="popup__form-input-error" />
-        <button type="submit" className="popup__form-submit">
-          Сохранить
-        </button>
       </PopupWithForm>
       <ImagePopup card={selectedCard} onClose={closeAllPopups} />
       <Footer />

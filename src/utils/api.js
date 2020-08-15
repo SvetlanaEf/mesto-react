@@ -3,19 +3,20 @@ import {config} from './utils';
 class Api {
     constructor(options) {
       this._options = options;
-      this._fetch = (url, options) => {
-        return fetch(`${this._options.baseUrl}${url}`, {
-          headers: this._options.headers,
-          ...options,
-        })
-          .then((res) => {
-            if (res.ok) {
-              return res.json();
-            }
-            return Promise.reject(`Ошибка: ${res.status}`);
-          });
-      };
     }
+
+    _fetch(url, options) {
+      return fetch(`${this._options.baseUrl}${url}`, {
+        headers: this._options.headers,
+        ...options,
+      })
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          }
+          return Promise.reject(`Ошибка: ${res.status}`);
+        });
+    };
   
     getInitialCards() {
       return this._fetch("/cards");
