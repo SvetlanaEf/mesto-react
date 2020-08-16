@@ -23,9 +23,9 @@ export default function Main({
       setUserName(userData.name);
       setUserDescription(userData.about);
       setUserAvatar(userData.avatar);
-      setCards(cards, []);
+      setCards(cards);
     });
-  });
+  }, []);
   return (
     <main className="content">
       <section className="profile">
