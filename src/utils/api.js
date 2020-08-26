@@ -46,15 +46,9 @@ class Api {
       });
     }
   
-    likeCard(cardId) {
+    likeCard(cardId, isLiked) {
       return this._fetch(`/cards/likes/${cardId}`, {
-        method: "PUT",
-      });
-    }
-  
-    unLikeCard(cardId) {
-      return this._fetch(`/cards/likes/${cardId}`, {
-        method: "DELETE",
+        method: isLiked ? "PUT" : "DELETE",
       });
     }
   
