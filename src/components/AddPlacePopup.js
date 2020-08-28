@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import PopupWithForm from "./PopupWithForm";
 
@@ -6,10 +6,13 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
   const [name, setName] = React.useState("");
   const [link, setLink] = React.useState("");
 
-  function handleSubmit() {
-    onAddPlace({ name, link });
+  useEffect(() => {
     setName("");
     setLink("");
+  }, [isOpen]);
+
+  function handleSubmit() {
+    onAddPlace({ name, link });
   }
   return (
     <PopupWithForm
