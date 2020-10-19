@@ -1,0 +1,14 @@
+.header__auth-button {
+  background: none;
+  border: none;
+  line-height: 22px;
+  text-align: right;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.header__auth-button:hover {
+  opacity: .6;
+}

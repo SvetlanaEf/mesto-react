@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Popup from "./Popup";
 
 export default function PopupWithForm({
   children,
@@ -16,23 +17,24 @@ export default function PopupWithForm({
   }
 
   return (
-    <div className={`popup popup_${name} ${isOpen ? "popup_opened" : ""}`}>
-      <div className="popup__container">
-        <button className="popup__close" onClick={onClose} />
-        <h3 className="popup__title">{title}</h3>
-        <form
-          className="popup__form"
-          name={name}
-          noValidate
-          onSubmit={handleSubmit}
-        >
-          {children}
-          <button type="submit" className="popup__form-submit">
-            {submitButtonName}
-          </button>
-        </form>
-      </div>
-    </div>
+    <Popup
+      name={name}
+      isOpen={isOpen}
+      onClose={onClose}
+      title={title}
+    >
+      <form
+        className="popup__form"
+        name={name}
+        noValidate
+        onSubmit={handleSubmit}
+      >
+        {children}
+        <button type="submit" className="popup__form-submit">
+          {submitButtonName}
+        </button>
+      </form>
+    </Popup>
   );
 }
 

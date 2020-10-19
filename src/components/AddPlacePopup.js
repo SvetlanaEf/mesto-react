@@ -23,7 +23,7 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       onSubmit={handleSubmit}
     >
       <input
-        id="name-input"
+        id="name-card"
         value={name}
         onChange={(e) => setName(e.target.value)}
         type="text"
@@ -34,9 +34,9 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         maxLength={30}
         required
       />
-      <span id="name-input-error" className="popup__form-input-error" />
+      <span id="name-card-error" className="popup__form-input-error" />
       <input
-        id="value-input"
+        id="value-card"
         value={link}
         onChange={(e) => setLink(e.target.value)}
         type="url"
@@ -45,7 +45,7 @@ export default function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
         name="value"
         required
       />
-      <span id="value-input-error" className="popup__form-input-error" />
+      <span id="value-card-error" className="popup__form-input-error" />
     </PopupWithForm>
   );
 }

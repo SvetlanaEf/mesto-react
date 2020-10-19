@@ -1,0 +1,14 @@
+.login {
+  display: flex;
+  width: 100%;
+  max-width: 358px;
+  flex-direction: column;
+  align-items: center;
+}
+
+@import url(./__form/login__form.css);
+@import url(./__heading/login__heading.css);
+@import url(./__form-field/login__form-field.css);
+@import url(./__form-submit/login__form-submit.css);
+@import url(./__register-text/login__register-text.css);
+@import url(./__link/login__link.css);
